@@ -1,21 +1,23 @@
+// driver2.cpp
+
 #include <iostream>
 #include "Money.h"
-using namespace std;
+
 int main() {
     std::cout << std::endl;
 
     Money m1{10};
     Money m2{20};
 	
- std::cout << m1 << " " << m2 << "\n\n"; // test stream
- //std::cout << -m1 << "\n"; // test unary
- //std::cout << (m1+=m2) << "\n"; // test shortcut
- std::cout << (m1+m2) << "\n"; // test arithmetic
- std::cout << m1 << "\n\n"; // confirm result of m1+=m2 and m1+m2
- std::cout << (++m1) << "\n"; // test prefix
- std::cout << (m1++) << "\n"; // test postfix
- std::cout << m1 << "\n\n"; // confirm prefix/postfix result
- std::cout << (m1 == m2) << "\n"; 
+    std::cout << m1 << " " << m2 << "\n\n";     // Test stream operator
+    std::cout << -m1 << "\n";                   // Test unary minus
+    std::cout << (m1 += m2) << "\n";            // Test += operator
+    std::cout << (m1 + m2) << "\n";             // Test + operator
+    std::cout << m1 << "\n\n";                  // Confirm result of m1 += m2 and m1 + m2
+    std::cout << (++m1) << "\n";                // Test prefix increment
+    std::cout << (m1++) << "\n";                // Test postfix increment
+    std::cout << m1 << "\n\n";                  // Confirm prefix/postfix result
+    std::cout << (m1 == m2) << "\n";            // Test equality operator
 
     std::cout << std::endl;
     return 0;
